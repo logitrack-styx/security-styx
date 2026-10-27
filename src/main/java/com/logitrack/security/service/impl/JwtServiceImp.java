@@ -1,6 +1,7 @@
 package com.logitrack.security.service.impl;
 
 import java.time.Instant;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.oauth2.jose.jws.SignatureAlgorithm;
@@ -28,6 +29,8 @@ public class JwtServiceImp implements JwtService {
     
     @Override
     public String generateToken(Usuario user) throws Exception {
+    	List<String> roles = List.of(user.getRole().toString());
+    	
     	Instant now = Instant.now();
         Instant expiresAt = now.plusSeconds(3600);
 
@@ -36,7 +39,7 @@ public class JwtServiceImp implements JwtService {
                 .issuedAt(now)
                 .expiresAt(expiresAt)
                 .subject(user.getId().toString())
-                .claim("role", user.getRole().name())
+                .claim("roles", roles)
                 .build();
 
         JwsHeader header = JwsHeader
