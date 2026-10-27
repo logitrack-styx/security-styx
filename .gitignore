@@ -57,3 +57,7 @@ application-local.yaml
 *.tmp
 *.swp
 *~
+
+# Claves criptográficas
+private.pem
+public.pem
