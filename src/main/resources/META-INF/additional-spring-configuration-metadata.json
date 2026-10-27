@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "security.jwt.private-key-path",
+    "type": "java.lang.String",
+    "description": "Private Key Path"
+  },
+  {
+    "name": "security.jwt.public-key-path",
+    "type": "java.lang.String",
+    "description": "Public Key Path"
+  },
+  {
+    "name": "security.jwt.issuer",
+    "type": "java.lang.String",
+    "description": "Issuer"
+  }
+]}
