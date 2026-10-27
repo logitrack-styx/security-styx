@@ -48,7 +48,7 @@ public class SecurityConfig {
 					
 					.requestMatchers(
 							HttpMethod.GET,
-							"/api/usuarios/me"
+							"/api/v1/usuarios/me"
 	                ).authenticated()
 					
 					.anyRequest().denyAll()

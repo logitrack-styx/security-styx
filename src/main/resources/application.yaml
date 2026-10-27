@@ -12,12 +12,6 @@ spring:
       ddl-auto: update
     show-sql: true
 
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          jwk-set-uri: 
-
 server:
   port: 8081
 
