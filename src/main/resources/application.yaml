@@ -19,4 +19,4 @@ security:
     jwt:
       private-key-path: classpath:certs/private.pem
       public-key-path: classpath:certs/public.pem
-      issuer: security-styx
+      issuer: logitrack-security

@@ -37,18 +37,18 @@ public class SecurityConfig {
 					
 					.requestMatchers(
 							HttpMethod.POST,
-							"/api/v1/auth/register",
-							"/api/v1/auth/login"
+							"/auth/register",
+							"/auth/login"
 					).permitAll()
 					
 					.requestMatchers(
 							HttpMethod.POST,
-							"/api/v1/usuarios"
+							"/users"
 	                ).hasRole("ADMIN")
 					
 					.requestMatchers(
 							HttpMethod.GET,
-							"/api/v1/usuarios/me"
+							"/users/me"
 	                ).authenticated()
 					
 					.anyRequest().denyAll()

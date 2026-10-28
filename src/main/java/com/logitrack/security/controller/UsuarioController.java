@@ -28,7 +28,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api/v1/usuarios")
+@RequestMapping("/users")
 @RequiredArgsConstructor
 @Tag(
     name = "Usuarios",
