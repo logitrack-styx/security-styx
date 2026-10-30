@@ -110,4 +110,10 @@ public class UsuarioController {
 	    return ResponseEntity.ok(usuarioService.getCurrentUser(userId));
 	}
 
+    @GetMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<UsuarioResponse> getById(
+            @org.springframework.web.bind.annotation.PathVariable UUID id) {
+        return ResponseEntity.ok(usuarioService.getCurrentUser(id));
+    }
 }
