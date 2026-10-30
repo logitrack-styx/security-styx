@@ -50,6 +50,7 @@ public class SecurityConfig {
 							HttpMethod.GET,
 							"/users/me"
 	                ).authenticated()
+                    .requestMatchers(HttpMethod.GET, "/users/*").hasRole("ADMIN")
 					
 					.anyRequest().denyAll()
 			)
